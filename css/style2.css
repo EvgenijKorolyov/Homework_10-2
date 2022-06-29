@@ -1,0 +1,78 @@
+.sectionA {grid-area: a;}
+.sectionB {grid-area: b;}
+.sectionC {grid-area: c;}
+.sectionD {grid-area: d;}
+.sectionE {grid-area: e;}
+.sectionF {grid-area: f;}
+
+.grid_container {
+    max-width: 940px;
+    margin: auto;
+    color: white;
+    font-size: 20px;
+    display: grid;
+    gap: 2px;
+    grid-auto-rows: minmax(160px, auto);
+    grid-template-areas:
+        "a"
+        "b"
+        "c"
+        "d"
+        "e"
+        "f";
+}
+
+@media (min-width: 600px) {
+    .grid_container {
+        grid-template-areas:
+        "a a"
+        "a a"
+        "b d"
+        "b e"
+        "b f"
+        "c f";
+    }
+}
+
+@media (min-width: 800px) {
+    .grid_container {
+        grid-template-areas:
+        "a b d"
+        "a b e"
+        "a b f"
+        "a c f"
+        "a c f";
+    }
+}
+
+section {
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.sectionA {
+    background-image: url(../img/hero-demo1.jpg);
+}
+.sectionB {
+    background-image: url(../img/hero-demo5.jpg);
+    justify-content: end;
+}
+.sectionC {
+    background-image: url(../img/hero-demo4.jpg);
+    justify-content: end;
+}
+.sectionD {
+    background-image: url(../img/hero-demo3.jpg);
+}
+.sectionE {
+    background-image: url(../img/hero-demo2.jpg);
+}
+.sectionF {
+    background-color: brown;
+    justify-content: space-between;
+}
+
+
